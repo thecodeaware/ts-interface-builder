@@ -48,5 +48,17 @@ const input: Input = builderOf<Input>()
     .build();
 ```
 
+# Contribution
+
+Feel free to add improvements. Remember about the tests!
+
+```bash
+npm install
+```
+
+```bash
+npm run test
+```
+
 # License
 This project is licensed under the terms of the MIT license - check [LICENSE](./LICENSE.md) file.
