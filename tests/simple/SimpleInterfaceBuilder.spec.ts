@@ -1,4 +1,4 @@
-import { builderOf } from '../../../src';
+import { builderOf } from '../../src/simple/SimpleInterfaceBuilder';
 
 interface Input {
   label: string;
@@ -6,31 +6,31 @@ interface Input {
   title?: string;
 }
 
-describe('ProxyInterfaceBuilder', () => {
+describe('SimpleInterfaceBuilder', () => {
   describe('should return', () => {
     it('built object', () => {
       // when
       const input: Input = builderOf<Input>()
-        .title('title')
-        .label('label')
-        .value(2)
+        .with('title', 'titleValue')
+        .with('label', 'labelValue')
+        .with('value', 2)
         .build();
 
       // then
-      expect(input.label).toEqual('label');
-      expect(input.title).toEqual('title');
+      expect(input.label).toEqual('labelValue');
+      expect(input.title).toEqual('titleValue');
       expect(input.value).toEqual(2);
     });
 
     it('built object with undefined filed', () => {
       // when
       const input: Input = builderOf<Input>()
-        .label('label')
-        .value(2)
+        .with('label', 'labelValue')
+        .with('value', 2)
         .build();
 
       // then
-      expect(input.label).toEqual('label');
+      expect(input.label).toEqual('labelValue');
       expect(input.value).toEqual(2);
       expect(input.title).toBeUndefined();
     });

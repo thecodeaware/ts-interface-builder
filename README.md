@@ -6,7 +6,7 @@ Builder pattern for typescript interfaces.
 
 ```bash
 
-npm install @thecodeaware/ts-builder
+npm install @thecodeaware/ts-interface-builder
 
 ```
 
