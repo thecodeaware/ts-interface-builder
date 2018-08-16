@@ -1,6 +1,6 @@
 {
   "name": "@thecodeaware/ts-interface-builder",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "description": "Builder pattern for typescript interfaces.",
   "main": "dist/index.js",

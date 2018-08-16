@@ -15,7 +15,7 @@ npm install @thecodeaware/ts-interface-builder
 __Interface builder based on ES6 Proxy__
 
 ```typescript
-import { builderOf } from '@thecodeaware/ts-builder'; 
+import { builderOf } from '@thecodeaware/ts-interface-builder'; 
 
 interface Input {
   label: string;
@@ -33,7 +33,7 @@ const input: Input = builderOf<Input>()
 __Simple interface builder (ES5)__
 
 ```typescript
-import { builderOf } from '@thecodeaware/ts-builder/dist/simple/SimpleInterfaceBuilder'; 
+import { builderOf } from '@thecodeaware/ts-interface-builder/dist/simple/SimpleInterfaceBuilder'; 
 
 interface Input {
   label: string;
