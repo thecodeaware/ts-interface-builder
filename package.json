@@ -1,10 +1,10 @@
 {
   "name": "@thecodeaware/ts-interface-builder",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "description": "Builder pattern for typescript interfaces.",
-  "main": "dist/index.js",
-  "typings": "dist/index",
+  "main": "dist/proxy/index.js",
+  "typings": "dist/proxy/index",
   "homepage": "https://github.com/thecodeaware/ts-interface-builder#readme",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "proxy"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.es6.build.json && tsc -p tsconfig.es5.build.json",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'tests/**/*.ts'",
     "test": "jest",
     "clean": "rm -rf dist/*",
