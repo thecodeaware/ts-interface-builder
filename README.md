@@ -36,6 +36,8 @@ __Simple interface builder (ES5)__
 
 ```typescript
 import { builderOf } from '@thecodeaware/ts-interface-builder/dist/simple/SimpleInterfaceBuilder'; 
+//or
+import { simpleBuilderOf as builderOf } from '@thecodeaware/ts-interface-builder'; 
 
 interface Input {
   label: string;

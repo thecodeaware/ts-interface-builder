@@ -1,4 +1,4 @@
-import { builderOf } from '../../src/simple/SimpleInterfaceBuilder';
+import { simpleBuilderOf as builderOf } from '../../src';
 
 interface Input {
   label: string;

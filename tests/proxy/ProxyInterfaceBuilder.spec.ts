@@ -1,4 +1,4 @@
-import { builderOf } from '../../src/proxy';
+import { builderOf } from '../../src';
 
 interface Input {
   label: string;
