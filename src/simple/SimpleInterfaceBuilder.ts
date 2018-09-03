@@ -1,4 +1,4 @@
-class SimpleInterfaceBuilder<T> {
+export class SimpleInterfaceBuilder<T> {
   private properties: T = {} as T;
 
   public build(): T {

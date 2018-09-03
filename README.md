@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/%40thecodeaware%2Fts-interface-builder.svg)](https://badge.fury.io/js/%40thecodeaware%2Fts-interface-builder)
 
-Builder pattern for typescript interfaces.
+> Builder pattern for typescript interfaces.
 
 # Installation
 
