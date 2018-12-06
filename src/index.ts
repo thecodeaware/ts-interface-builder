@@ -1,5 +1,2 @@
-export { builderOf } from './proxy/ProxyInterfaceBuilder';
-export { InterfaceBuilder } from './proxy/InterfaceBuilder.type';
-
-export { builderOf as simpleBuilderOf } from './simple/SimpleInterfaceBuilder';
-export { SimpleInterfaceBuilder } from './simple/SimpleInterfaceBuilder';
+export { builderOf } from './es6/ProxyInterfaceBuilder';
+export { InterfaceBuilder } from './es6/InterfaceBuilder.type';

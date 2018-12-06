@@ -1,6 +1,7 @@
 # Typescript Interface Builder
 
 [![npm version](https://badge.fury.io/js/%40thecodeaware%2Fts-interface-builder.svg)](https://badge.fury.io/js/%40thecodeaware%2Fts-interface-builder)
+[![MIT License](http://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/thecodeaware/ts-interface-builder/blob/master/LICENSE.md)
 
 > Builder pattern for typescript interfaces.
 
@@ -32,12 +33,10 @@ const input: Input = builderOf<Input>()
     .build();
 ```
 
-__Simple interface builder (ES5)__
+__ES5 interface builder__
 
 ```typescript
-import { builderOf } from '@thecodeaware/ts-interface-builder/dist/simple/SimpleInterfaceBuilder'; 
-//or
-import { simpleBuilderOf as builderOf } from '@thecodeaware/ts-interface-builder'; 
+import { builderOf } from '@thecodeaware/ts-interface-builder/dist/es5';
 
 interface Input {
   label: string;
@@ -65,4 +64,7 @@ npm run test
 ```
 
 # License
-This project is licensed under the terms of the MIT license - check [LICENSE](./LICENSE.md) file.
+This project is licensed under the terms of the MIT license - check [LICENSE](https://github.com/thecodeaware/ts-interface-builder/blob/master/LICENSE.md) file.
+
+# Changelog
+[CHANGELOG](https://github.com/thecodeaware/ts-interface-builder/blob/master/CHANGELOG.md) 

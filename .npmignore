@@ -16,5 +16,8 @@
 jest.config.js
 tslint.json
 tsconfig.json
-tsconfig.build.json
+tsconfig.*.build.json
 package-lock.json
+.gitignore
+.npmignore
+.npmrc

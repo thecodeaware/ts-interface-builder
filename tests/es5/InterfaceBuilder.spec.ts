@@ -1,4 +1,4 @@
-import { simpleBuilderOf as builderOf } from '../../src';
+import { builderOf } from '../../src/es5';
 
 interface Input {
   label: string;
@@ -6,7 +6,7 @@ interface Input {
   title?: string;
 }
 
-describe('SimpleInterfaceBuilder', () => {
+describe('InterfaceBuilder', () => {
   describe('should return', () => {
     it('built object', () => {
       // when

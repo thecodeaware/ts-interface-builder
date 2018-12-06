@@ -1,4 +1,4 @@
-export class SimpleInterfaceBuilder<T> {
+export class InterfaceBuilder<T> {
   private properties: T = {} as T;
 
   public build(): T {
@@ -12,6 +12,6 @@ export class SimpleInterfaceBuilder<T> {
   }
 }
 
-export function builderOf<T>(): SimpleInterfaceBuilder<T> {
-  return new SimpleInterfaceBuilder<T>();
+export function builderOf<T>(): InterfaceBuilder<T> {
+  return new InterfaceBuilder<T>();
 }

@@ -1,6 +1,6 @@
 import { InterfaceBuilder } from './InterfaceBuilder.type';
 
-class InterfaceBuilderProxy<T> {
+class ProxyInterfaceBuilder<T> {
   private readonly built: T = {} as T;
   private readonly proxy: InterfaceBuilder<T>;
 
@@ -34,5 +34,5 @@ class InterfaceBuilderProxy<T> {
 }
 
 export function builderOf<T>(): InterfaceBuilder<T> {
-  return new InterfaceBuilderProxy<T>().getProxy();
+  return new ProxyInterfaceBuilder<T>().getProxy();
 }

@@ -5,7 +5,7 @@
     "module": "commonjs"
   },
   "include": [
-    "src/proxy/**/*.ts",
+    "src/es6/**/*.ts",
     "src/index.ts"
   ]
 }
