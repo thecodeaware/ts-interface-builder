@@ -1,8 +1,9 @@
 # Typescript Interface Builder
 
-[![npm version](https://badge.fury.io/js/%40thecodeaware%2Fts-interface-builder.svg)](https://badge.fury.io/js/%40thecodeaware%2Fts-interface-builder)
+[![](https://img.shields.io/npm/v/@thecodeaware/ts-interface-builder.svg)](https://badge.fury.io/js/%40thecodeaware%2Fts-interface-builder)
 [![MIT License](http://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/thecodeaware/ts-interface-builder/blob/master/LICENSE.md)
-
+![](https://img.shields.io/npm/types/@thecodeaware/ts-interface-builder.svg)
+![](https://img.shields.io/npm/dm/@thecodeaware/ts-interface-builder.svg)
 > Builder pattern for typescript interfaces.
 
 # Installation
