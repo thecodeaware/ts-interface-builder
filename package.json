@@ -1,6 +1,6 @@
 {
   "name": "@thecodeaware/ts-interface-builder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "description": "Builder pattern for typescript interfaces.",
   "main": "dist/index.js",
@@ -24,6 +24,7 @@
     "build": "tsc -p tsconfig.es6.build.json && tsc -p tsconfig.es5.build.json",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'tests/**/*.ts'",
     "test": "jest",
+    "test:coverage": "jest --coverage --maxWorkers=4",
     "clean": "rm -rf dist/*",
     "prepare": "npm run test && npm run clean && npm run build"
   },
