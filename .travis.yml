@@ -6,9 +6,8 @@ install:
   - "npm install"
 
 script:
-  - "npm run test"
-  - "npm run test:coverage"
   - "npm run lint"
+  - "npm run test:coverage"
 
 before_install:
   - pip install --user codecov
