@@ -34,6 +34,16 @@ const input: Input = builderOf<Input>()
     .label('label')
     .value(2)
     .build();
+
+// with default object
+const inputWithDefaults: Input = builderOf<Input>({
+    title: 'defaultTitle',
+    label: 'defaultLabel',
+    value: 1,
+  })
+  .title('title')
+  .value(2)
+  .build();
 ```
 
 __ES5 interface builder__
@@ -53,6 +63,12 @@ const input: Input = builderOf<Input>()
     .with('value', 2)
     .build();
 ```
+
+# ToDo
+
+* add defaults to the es5 builder
+* add typedoc doc in the code
+* generate documentation file from typedoc
 
 # Contribution
 
