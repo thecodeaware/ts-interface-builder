@@ -1,21 +1,22 @@
 module.exports = {
   clearMocks: false,
-  coverageDirectory: "coverage",
+  coverageDirectory: 'coverage',
   globals: {
-    "ts-jest": {
-      "tsConfigFile": "tsconfig.json"
-    }
+    'ts-jest': {
+      tsConfig: 'tsconfig.json',
+    },
   },
   moduleFileExtensions: [
-    "ts",
-    "tsx",
-    "js"
+    'js',
+    'ts',
+    'tsx',
   ],
-  testEnvironment: "node",
+  testEnvironment: 'node',
   testMatch: [
-    "**/tests/**/*.+(ts|tsx|js)"
+    '**/tests/**/*.+(ts|tsx|js)',
   ],
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest"
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-};
+  preset: 'ts-jest',
+}

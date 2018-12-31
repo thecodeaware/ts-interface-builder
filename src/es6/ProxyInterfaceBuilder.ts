@@ -1,10 +1,11 @@
 import { InterfaceBuilder } from './InterfaceBuilder.type';
 
 class ProxyInterfaceBuilder<T> {
-  private readonly built: T = {} as T;
+  private built: T = {} as T;
   private readonly proxy: InterfaceBuilder<T>;
 
-  constructor() {
+  constructor(defaults?: T) {
+    this.assignDefaults(defaults);
     this.proxy = new Proxy(
       {},
       {
@@ -28,11 +29,23 @@ class ProxyInterfaceBuilder<T> {
     };
   }
 
+  private assignDefaults(defaults: T): void {
+    if (defaults) {
+      this.built = Object.assign({}, this.built, defaults);
+    }
+  }
+
   private build(): T {
     return this.built;
   }
 }
 
-export function builderOf<T>(): InterfaceBuilder<T> {
-  return new ProxyInterfaceBuilder<T>().getProxy();
+/**
+ * Provides builders method based on given `T` interface.
+ *
+ * @param defaults Default T object to ensure that all required properties are filled
+ * @returns InterfaceBuilder
+ */
+export function builderOf<T>(defaults?: T): InterfaceBuilder<T> {
+  return new ProxyInterfaceBuilder<T>(defaults).getProxy();
 }
