@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   clearMocks: false,
   coverageDirectory: 'coverage',
   globals: {
@@ -11,7 +11,6 @@ module.exports = {
     'ts',
     'tsx',
   ],
-  testEnvironment: 'node',
   testMatch: [
     '**/tests/**/*.+(ts|tsx|js)',
   ],
@@ -19,4 +18,19 @@ module.exports = {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   preset: 'ts-jest',
-}
+};
+
+module.exports = {
+  projects: [
+    {
+      displayName: "node",
+      testEnvironment: 'node',
+      ...config,
+    },
+    {
+      displayName: "jsdom",
+      testEnvironment: 'jsdom',
+      ...config,
+    }
+  ]
+};
