@@ -1,6 +1,6 @@
 {
   "name": "@thecodeaware/ts-interface-builder",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "license": "MIT",
   "description": "Builder pattern for typescript interfaces.",
   "main": "dist/index.js",
@@ -36,7 +36,7 @@
   "devDependencies": {
     "@types/jest": "23.3.1",
     "ghooks": "2.0.4",
-    "jest": "23.5.0",
+    "jest": "23.6.0",
     "ts-jest": "23.10.5",
     "tslint": "5.11.0",
     "typescript": "^2.9.0"

@@ -70,7 +70,6 @@ const input: Input = builderOf<Input>()
 
 * add defaults to the es5 builder
 * add typedoc doc in the code
-* generate documentation file from typedoc
 
 # Contribution
 
