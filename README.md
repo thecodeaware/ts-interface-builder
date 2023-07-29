@@ -9,7 +9,7 @@
 ![](https://img.shields.io/npm/types/@thecodeaware/ts-interface-builder.svg)
 ![](https://img.shields.io/npm/dm/@thecodeaware/ts-interface-builder.svg)
 
-> Builder pattern for typescript interfaces.
+> Builder pattern for typescript types.
 
 # Installation
 
@@ -20,8 +20,6 @@ npm install @thecodeaware/ts-interface-builder
 ```
 
 # Usage
-
-**Interface builder based on ES6 Proxy**
 
 ```typescript
 import { builderOf } from "@thecodeaware/ts-interface-builder";
@@ -48,29 +46,6 @@ const inputWithDefaults: Input = builderOf<Input>({
   .value(2)
   .build();
 ```
-
-**ES5 interface builder**
-
-```typescript
-import { builderOf } from "@thecodeaware/ts-interface-builder/dist/es5";
-
-interface Input {
-  label: string;
-  value: number;
-  title?: string;
-}
-
-const input: Input = builderOf<Input>()
-  .with("title", "titleValue")
-  .with("label", "labelValue")
-  .with("value", 2)
-  .build();
-```
-
-# ToDo
-
-- add defaults to the es5 builder
-- add typedoc doc in the code
 
 # Contribution
 
