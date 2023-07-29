@@ -7,10 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added prettier configuration.
+- Added nvmrc configuration (node 18.17)
+
 ### Changed
 
 - Changed builder type name.
 - Bump dependencies versions.
+- Replace tslint with eslint.
 
 ### Removed
 

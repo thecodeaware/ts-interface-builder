@@ -58,7 +58,11 @@ describe("builderOf", () => {
 
   it("should not throw error when defaults has empty value ", () => {
     // when
-    const input: Input = builderOf<Input>(null).label("label").value(2).build();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const input: Input = builderOf<Input>(null as any)
+      .label("label")
+      .value(2)
+      .build();
 
     // then
     expect(input.label).toEqual("label");

@@ -58,3 +58,22 @@ npm install
 ```bash
 npm run test
 ```
+
+# FAQ
+
+1. Why not API with "with" prefix like "withLabel"?
+
+It is ossible with TS but it brings more edge cases.
+
+```ts
+export type TypeBuilder<T> = {
+  [P in keyof T as `with${Capitalize<string & P>}`]: (
+    arg: T[P],
+  ) => TypeBuilder<T>;
+} & {
+  build(): T;
+};
+```
+
+- Object with capitalized property.
+- Object with capitalized and non-capitalized property like `label` and `Label`.
