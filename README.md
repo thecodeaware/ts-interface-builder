@@ -22,7 +22,7 @@ npm install @thecodeaware/ts-interface-builder
 # Usage
 
 ```typescript
-import { builderOf } from "@thecodeaware/ts-interface-builder";
+import { builderOf } from '@thecodeaware/ts-interface-builder';
 
 interface Input {
   label: string;
@@ -30,19 +30,15 @@ interface Input {
   title?: string;
 }
 
-const input: Input = builderOf<Input>()
-  .title("title")
-  .label("label")
-  .value(2)
-  .build();
+const input: Input = builderOf<Input>().title('title').label('label').value(2).build();
 
 // with default object
 const inputWithDefaults: Input = builderOf<Input>({
-  title: "defaultTitle",
-  label: "defaultLabel",
+  title: 'defaultTitle',
+  label: 'defaultLabel',
   value: 1,
 })
-  .title("title")
+  .title('title')
   .value(2)
   .build();
 ```
@@ -67,9 +63,7 @@ It is ossible with TS but it brings more edge cases.
 
 ```ts
 export type TypeBuilder<T> = {
-  [P in keyof T as `with${Capitalize<string & P>}`]: (
-    arg: T[P],
-  ) => TypeBuilder<T>;
+  [P in keyof T as `with${Capitalize<string & P>}`]: (arg: T[P]) => TypeBuilder<T>;
 } & {
   build(): T;
 };

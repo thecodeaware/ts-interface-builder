@@ -1,4 +1,4 @@
-import { TypeBuilder } from "./TypeBuilder.type";
+import { TypeBuilder } from './TypeBuilder.type';
 
 class ProxyTypeBuilder<T> {
   private built: T = {} as T;
@@ -9,8 +9,7 @@ class ProxyTypeBuilder<T> {
     this.proxy = new Proxy(
       {},
       {
-        get: (target: object, propertyKey: string) =>
-          this.handleProxyGet(propertyKey),
+        get: (target: object, propertyKey: string) => this.handleProxyGet(propertyKey),
       },
     ) as TypeBuilder<T>;
   }
@@ -20,7 +19,7 @@ class ProxyTypeBuilder<T> {
   }
 
   private handleProxyGet(propertyKey: string) {
-    if (propertyKey === "build") {
+    if (propertyKey === 'build') {
       return () => this.build();
     }
 

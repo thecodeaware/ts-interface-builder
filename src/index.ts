@@ -1,2 +1,2 @@
-export { builderOf } from "./builderOf";
-export { TypeBuilder } from "./TypeBuilder.type";
+export { builderOf } from './builderOf';
+export { TypeBuilder } from './TypeBuilder.type';
