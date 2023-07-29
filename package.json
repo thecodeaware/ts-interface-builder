@@ -2,7 +2,7 @@
   "name": "@thecodeaware/ts-interface-builder",
   "version": "1.2.0",
   "license": "MIT",
-  "description": "Builder pattern for typescript interfaces.",
+  "description": "Builder pattern for typescript types.",
   "main": "dist/index.js",
   "typings": "dist/index",
   "homepage": "https://github.com/thecodeaware/ts-interface-builder#readme",
@@ -16,29 +16,35 @@
   "keywords": [
     "typescript",
     "interface",
+    "types",
     "builder",
     "pattern",
     "proxy"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.es6.build.json && tsc -p tsconfig.es5.build.json",
-    "lint": "tslint -c tslint.json 'src/**/*.ts' 'tests/**/*.ts'",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint 'src/**/*.ts' 'tests/**/*.ts'",
     "test": "jest",
     "test:coverage": "jest --coverage --maxWorkers=4",
     "clean": "rm -rf dist/*",
+    "format": "prettier --write .",
     "prepublishOnly": "npm run test && npm run clean && npm run build"
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run lint && npm run test"
+      "pre-commit": "npm run lint & npm run format && npm run test"
     }
   },
   "devDependencies": {
-    "@types/jest": "23.3.1",
+    "@types/jest": "29.5.3",
+    "@typescript-eslint/eslint-plugin": "6.2.0",
+    "@typescript-eslint/parser": "6.2.0",
+    "eslint": "8.46.0",
     "ghooks": "2.0.4",
-    "jest": "23.6.0",
-    "ts-jest": "23.10.5",
-    "tslint": "5.11.0",
-    "typescript": "^2.9.0"
+    "jest": "29.6.2",
+    "jest-environment-jsdom": "29.6.2",
+    "prettier": "3.0.0",
+    "ts-jest": "29.1.1",
+    "typescript": "4.9.5"
   }
 }

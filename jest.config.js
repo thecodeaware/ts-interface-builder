@@ -1,36 +1,25 @@
 const config = {
   clearMocks: false,
-  coverageDirectory: 'coverage',
-  globals: {
-    'ts-jest': {
-      tsConfig: 'tsconfig.json',
-    },
-  },
-  moduleFileExtensions: [
-    'js',
-    'ts',
-    'tsx',
-  ],
-  testMatch: [
-    '**/tests/**/*.+(ts|tsx|js)',
-  ],
+  coverageDirectory: "coverage",
+  moduleFileExtensions: ["js", "ts", "tsx"],
+  testMatch: ["**/tests/**/*.+(ts|tsx|js)"],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    "^.+\\.(ts|tsx)$": ["ts-jest", { tsconfig: "tsconfig.json" }],
   },
-  preset: 'ts-jest',
+  preset: "ts-jest",
 };
 
 module.exports = {
   projects: [
     {
       displayName: "node",
-      testEnvironment: 'node',
+      testEnvironment: "node",
       ...config,
     },
     {
       displayName: "jsdom",
-      testEnvironment: 'jsdom',
+      testEnvironment: "jsdom",
       ...config,
-    }
-  ]
+    },
+  ],
 };
