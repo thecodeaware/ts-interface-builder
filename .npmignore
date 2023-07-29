@@ -24,3 +24,8 @@ package-lock.json
 .npmignore
 .npmrc
 .travis.yml
+.eslintrc.js
+.nvmrc
+.prettierignore
+.prettierrc.json
+*.js.map
