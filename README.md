@@ -57,9 +57,9 @@ npm run test
 
 # FAQ
 
-1. Why not API with "with" prefix like "withLabel"?
+1. Why not API with `with` prefix like `withLabel` for `label` property?
 
-It is ossible with TS but it brings more edge cases.
+It is possible with TS but it brings more edge cases.
 
 ```ts
 export type TypeBuilder<T> = {
